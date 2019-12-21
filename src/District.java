@@ -1,6 +1,6 @@
 // Cameron Samuels
 
-public class District extends State implements Division {
+public class District extends State {
 
 	
 	

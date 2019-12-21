@@ -1,6 +1,6 @@
 // Cameron Samuels
 
-public class State implements Division {
+public class State extends Division {
 	
 	
 	
@@ -17,8 +17,6 @@ public class State implements Division {
 	
 	/* Variables */
 	private String state;
-	private int population;
-	private int numVoters;
 	
 	
 	
@@ -86,45 +84,11 @@ public class State implements Division {
 	}
 	
 	
-	/** Sets the population in the division for the race
-	 * @throws IllegalArgumentException if population is less than 0
-	**/
-	public void setPopulation(int x) {
-		
-		if (x < 0)
-			throw new IllegalArgumentException("Population cannot be less than 0");
-		
-		population = x;
-		
-	}
-	
-	
-	/** Sets the number of eligible voters in the division for the race
-	 * @throws IllegalArgumentException if number of voters is less than 0
-	**/
-	public void setNumVoters(int x) {
-		
-		if (x < 0)
-			throw new IllegalArgumentException("Number of voters cannot be less than 0");
-		
-		numVoters = x;
-		
-	}
-	
-	
 	
 	/* Get methods */
 	
 	public String getState() {
 		return state;
-	}
-	
-	public int getPopulation() {
-		return population;
-	}
-	
-	public int getNumVoters() {
-		return numVoters;
 	}
 	
 	public String toString() {
