@@ -21,5 +21,5 @@ to enable generic data to maintain consistent throughout the types of divisions.
   or in `District` objects if they are equal. The only disadvantage to this is
   the equivalence of `contains()` and `equals()` in `District` objects.
 - **Abstraction** - This project mainly uses abstraction in the abstract class `Division`.
-This allows for divisions to contain default data such as `population` and `numVoters`
-while allowing for each division to still be of the type of division it is: `State`, `District`, or `Country`.
+Each child class of `Division` has its own `contains()` method
+while allowing each division to be the type of division it is: `State`, `District`, or `Country`.

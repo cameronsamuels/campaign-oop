@@ -34,6 +34,7 @@ public class District extends State {
 		
 	}
 	
+	/** Determines whether the district contains a provided division */
 	public boolean contains(Object obj) {
 		return equals(obj);
 	}

@@ -10,6 +10,11 @@ public abstract class Division {
 	
 	
 	
+	/** Determines whether the division contains a provided division */
+	public abstract boolean contains(Object obj);
+	
+	
+	
 	/* Set methods */
 	
 	/** Sets the population in the division for the race

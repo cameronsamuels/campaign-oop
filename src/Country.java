@@ -18,6 +18,42 @@ public class Country extends Division {
 	
 	
 	
+	public boolean equals(Object obj) {
+		
+		if (obj instanceof Country == false)
+			return false;
+		
+		Country provided = (Country)obj;
+		
+		if (provided.getCountry().equals(getCountry()))
+			return true;
+		
+		return false;
+		
+	}
+	
+	
+	/** Determines whether the country contains a provided division */
+	public boolean contains(Object obj) {
+		
+		if (obj instanceof Country)
+			return equals(obj);
+		
+		if (getCountry().equals("US")) {
+			if (obj instanceof State || obj instanceof District) {
+				String state = ((State)obj).getState();
+				for (String i : State.STATES)
+					if (i.equals(state))
+						return true;
+			}
+		}
+		
+		return false;
+		
+	}
+	
+	
+	
 	/* Set methods */
 	
 	/** Sets the name of the country in the division for the race
@@ -25,7 +61,7 @@ public class Country extends Division {
 	**/
 	private void setCountry(String x) {
 		
-		if (country == null)
+		if (x == null)
 			throw new IllegalArgumentException("Country cannot be null");
 		
 		country = x;

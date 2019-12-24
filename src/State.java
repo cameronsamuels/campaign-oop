@@ -30,9 +30,7 @@ public class State extends Division {
 	
 	
 	
-	/** Determines whether the state contains a provided district
-	 * @returns true if the state contains the provided district
-	**/
+	/** Determines whether the state contains a provided division */
 	public boolean contains(Object obj) {
 		
 		if (obj instanceof District == false)
